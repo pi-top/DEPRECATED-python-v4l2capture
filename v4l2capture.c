@@ -378,7 +378,7 @@ static PyObject *Video_device_read_internal(Video_device *self, int queue)
     }
 
 #ifdef USE_LIBV4L
-  PyObject *result = PyString_FromStringAndSize(
+  PyObject *result = PyBytes_FromStringAndSize(
       self->buffers[buffer.index].start, buffer.bytesused);
 
   if(!result)
@@ -390,7 +390,7 @@ static PyObject *Video_device_read_internal(Video_device *self, int queue)
   // For the byte order, see: http://v4l2spec.bytesex.org/spec/r4339.htm
   // For the color conversion, see: http://v4l2spec.bytesex.org/spec/x2123.htm
   int length = buffer.bytesused / 4 * 6;
-  PyObject *result = PyString_FromStringAndSize(NULL, length);
+  PyObject *result = PyBytes_FromStringAndSize(NULL, length);
 
   if(!result)
     {
