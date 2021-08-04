@@ -1,22 +1,14 @@
 #!/usr/bin/python
-#
-# python-v4l2capture
-#
-# 2009, 2010, 2011, 2015, 2016 Fredrik Portstrom <https://portstrom.com>
-#
-# I, the copyright holder of this file, hereby release it into the
-# public domain. This applies worldwide. In case this is not legally
-# possible: I grant anyone the right to use this work for any
-# purpose, without any conditions, unless such conditions are
-# required by law.
 
-from distutils.core import Extension, setup
+from setuptools import Extension, setup
+
+
 setup(
     name = "v4l2capture",
     version = "12",
-    author = "Fredrik Portstrom",
-    author_email = "https://portstrom.com",
-    url = "https://launchpad.net/python-v4l2-capture",
+    author = "pi-top",
+    author_email = "deb-maintainers@pi-top.com",
+    url = "https://github.com/pi-top/python-v4l2capture",
     description = "Capture video with video4linux2",
     long_description = "python-v4l2capture is a slim and easy to use Python "
     "extension for capturing video with video4linux2.",

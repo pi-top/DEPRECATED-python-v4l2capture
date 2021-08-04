@@ -19,6 +19,7 @@ import select
 import time
 import v4l2capture
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--delay", default = 0, dest = "delay", help =
@@ -77,8 +78,9 @@ def main():
     image = Image.frombytes("RGB", (size_x, size_y), image_data)
     image.save(options.output_path)
     if not options.quiet:
-        print "Saved file '%s' (Size: %s x %s)" % (
-            options.output_path, size_x, size_y)
+        print("Saved file '%s' (Size: %s x %s)" % (
+            options.output_path, size_x, size_y))
+
 
 if __name__ == "__main__":
     main()
