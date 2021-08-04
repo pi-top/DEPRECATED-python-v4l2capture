@@ -113,7 +113,7 @@ static void Video_device_dealloc(Video_device *self)
       v4l2_close(self->fd);
     }
 
-  self->ob_type->tp_free((PyObject *)self);
+  Py_TYPE(self)->tp_free((PyObject *)self);
 }
 
 static int Video_device_init(Video_device *self, PyObject *args,
