@@ -184,7 +184,7 @@ static PyObject *Video_device_get_info(Video_device *self)
     {
       if(caps.capabilities & capability->id)
 	{
-	  PyObject *s = PyString_FromString(capability->name);
+	  PyObject *s = PyUnicode_FromString(capability->name);
 
 	  if(!s)
 	    {
