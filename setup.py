@@ -4,7 +4,7 @@ from setuptools import Extension, setup
 
 
 setup(
-    name = "v4l2capture",
+    name = "python-v4l2capture",
     version = "12",
     author = "pi-top",
     author_email = "deb-maintainers@pi-top.com",
