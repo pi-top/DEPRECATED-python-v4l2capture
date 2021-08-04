@@ -158,7 +158,7 @@ static PyObject *Video_device_close(Video_device *self)
 static PyObject *Video_device_fileno(Video_device *self)
 {
   ASSERT_OPEN;
-  return PyInt_FromLong(self->fd);
+  return PyLong_FromLong(self->fd);
 }
 
 static PyObject *Video_device_get_info(Video_device *self)
